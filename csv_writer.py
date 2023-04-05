@@ -5,8 +5,8 @@ beatles = [
     { 'first_name': 'Ringo', 'last_name': 'Starr', 'instrument': 'drums'}
 ]
 
-with open("data/beatles.csv", "w") as csvfile:
+with open('data/beatles.csv', 'w') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=beatles[0].keys())
-    writer.writeheader()
+    writer.writeheader() # write the header line
     for beatle in beatles:
-        writer.writerow(beatle)
+        writer.writerow(beatle) # writes a row of beatle

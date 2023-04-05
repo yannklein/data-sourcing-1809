@@ -2,7 +2,7 @@ import requests
 
 url = "https://api.github.com/users/yannklein"
 
-response = requests.get(url)
-# print(response)
-data = response.json()
-print(data["name"])
+raw_data = requests.get(url)
+# print(raw_data.content)
+data = raw_data.json()
+print(data['blog'])
