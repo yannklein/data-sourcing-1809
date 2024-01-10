@@ -1,12 +1,10 @@
-https :// openlibrary.org /api/books ? bibkeys=ISBN:0451526538&callback=mycallback
+# URL STRUCTURE
 
-SCHEME :// DOMAIN /the/path ? key=value & key=value & key=value & key=value
+https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&callback=mycallback
+SCHEME :// DOMAIN  /the/paths ?key=value&key=value&key=value
 
-# BASE URL
-https://openlibrary.org/api
+BASE URL
+https://openlibrary.org/api/
 
-# END POINT
-/books
-
-# QUERY PARAMS
-bibkeys=ISBN:0451526538&callback=mycallback
+END POINT
+books?bibkeys=ISBN:0451526538&callback=mycallback
