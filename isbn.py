@@ -1,11 +1,17 @@
 import requests
 
 isbn = '0-7475-3269-9'
-isbn_formatted = f"ISBN:{isbn}"
+formatted_isbn = f'ISBN:{isbn}'
+# formatted_isbn ==> 'ISBN:0-7475-3269-9'
 
-url = f"https://openlibrary.org/api/books?bibkeys={isbn_formatted}&format=json&jscmd=data"
-print(url)
+# https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&callback=mycallback
+# url = "https://openlibrary.org/api/books?bibkeys=ISBN:0-7475-3269-9&format=json&jscmd=data"
+url = "https://openlibrary.org/api/books"
 
-data = requests.get(url).json()
-
-print(data[isbn_formatted]["title"])
+response = requests.get(url, params={
+    'bibkeys': formatted_isbn,
+    'format': 'json',
+    'jscmd': 'data'
+})
+data = response.json()
+print(data[formatted_isbn]["title"])

@@ -1,8 +1,7 @@
 import requests
 
-url = "https://api.github.com/users/MyoungchulK"
+url = "https://api.github.com/users/yannklein"
 
 response = requests.get(url)
-# print(response.content)
-data = response.json() # parse the json (= converting the json text into some python code)
-print(data['bio'])
+data = response.json()
+print(data['blog'])
