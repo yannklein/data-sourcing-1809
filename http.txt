@@ -1,7 +1,7 @@
 # URL STRUCTURE
+https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&callback=mycallback
 
-https :// openlibrary.org /api/books ? bibkeys=ISBN:0451526538 & callback=mycallback
-PROTOCOL :// DOMAIN /the/path ? key=value & key=value & key=value & query=params
+PROTOCOL :// DOMAIN.org /some/path ? query=params & key=value & key=value
 
 # BASE URL
 https://openlibrary.org/api
